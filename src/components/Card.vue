@@ -1,7 +1,7 @@
 <template>
-  <div class="relative flex flex-col items-start justify-end p-8 overflow-hidden transition duration-300 transform rounded-xl w-72 h-96 hover:scale-105">
+  <div class="relative flex flex-col items-start justify-end p-8 overflow-hidden transition duration-300 transform shadow-white rounded-xl hover:scale-105">
     <button
-      class="absolute w-6 h-6 text-white rounded-full top-6 right-6"
+      class="absolute w-6 h-6 rounded-full text-gray-50 top-6 right-6"
       @click="toggleLike"
     >
       <svg
@@ -20,10 +20,10 @@
         />
       </svg>
     </button>
-    <h3 class="mb-2 font-semibold text-left text-white font-display">
+    <h3 class="mb-2 font-semibold text-left text-gray-50 font-display">
       {{ title }}
     </h3>
-    <small class="font-medium text-left text-white font-display">{{ date }}</small>
+    <small class="font-medium text-left text-gray-50 font-display">{{ date }}</small>
     <img
       class="absolute top-0 left-0 flex-shrink-0 object-cover w-full h-full -z-10"
       :src="src"
