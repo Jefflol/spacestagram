@@ -46,11 +46,11 @@ export default defineComponent({
 
         onMounted(async () => {
             loadMoreApod()
-            window.addEventListener('scroll', debounce(handleScroll, 500))
+            window.addEventListener('scroll', debounce(handleScroll, 300))
         })
 
         onUnmounted(async () => {
-            window.removeEventListener('scroll', debounce(handleScroll, 500))
+            window.removeEventListener('scroll', debounce(handleScroll, 300))
         })
 
         const handleScroll = () => {
