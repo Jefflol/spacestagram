@@ -1,7 +1,12 @@
-# Vue 3 + Vite
+# [Spacestagram](https://shopify-spacestagram.vercel.app)
+Image-sharing from the final frontier.
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Demo
+[https://shopify-spacestagram.vercel.app](https://shopify-spacestagram.vercel.app)
 
-## Recommended IDE Setup
+## Features
+* Infinite scroll to load more data
+* Starry night background animations
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+## Running locally
+To run this webapp locally, you will need a NASA API Key from [https://api.nasa.gov](https://api.nasa.gov). You can then set the VITE_NASA_API_KEY in a `.env.local` file.
