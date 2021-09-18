@@ -1,8 +1,17 @@
 <template>
     <div class="fixed top-0 left-0 w-full h-full">
-        <div class="rounded-full starSlow" :style="{ 'boxShadow': starsStyle1 }"></div>
-        <div class="rounded-full opacity-90 starMedium" :style="{ 'boxShadow': starsStyle2 }"></div>
-        <div class="rounded-full opacity-90 starFast" :style="{ 'boxShadow': starsStyle3 }"></div>
+        <div
+            class="rounded-full starSlow"
+            :style="{ 'boxShadow': starsStyle1 }"
+        />
+        <div
+            class="rounded-full opacity-90 starMedium"
+            :style="{ 'boxShadow': starsStyle2 }"
+        />
+        <div
+            class="rounded-full opacity-90 starFast"
+            :style="{ 'boxShadow': starsStyle3 }"
+        />
     </div>
 </template>
 
