@@ -13,7 +13,7 @@
             class="h-64 lg:h-80 xl:h-96"
             :title="data.title"
             :date="data.date"
-            :src="data.url"
+            :src="data?.thumbnail_url || data.url"
             :alt="data.title"
         />
     </div>
@@ -60,13 +60,13 @@ export default defineComponent({
         const loadMoreApod = async () => {
             setNextRange()
 
-            let newApod = await getApodDataWithRange(apodStart.value, apodEnd.value)
-            newApod = newApod.filter((apod) => apod.media_type === 'image').reverse()
+            const newApod = await getApodDataWithRange(apodStart.value, apodEnd.value)
+            newApod.reverse()
             apodDataList.value.push(...newApod)
         }
 
         const setNextRange = () => {
-            apodEndDate.value = apodEndDate.value.subtract(apodInterval + 1, 'days')
+            apodEndDate.value = apodEndDate.value.subtract(1, 'days')
             apodEnd.value = apodEndDate.value.format('YYYY-MM-DD')
             apodStart.value = apodEndDate.value.subtract(apodInterval, 'days').format('YYYY-MM-DD')
         }

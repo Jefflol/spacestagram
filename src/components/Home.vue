@@ -58,7 +58,7 @@ export default defineComponent({
                 title: data.title,
                 date: data.date,
                 description: data.explanation,
-                src: data.url,
+                src: data?.thumbnail_url || data.url,
                 alt: data.title
             }
         })
