@@ -37,7 +37,7 @@ export default defineComponent({
 
         const apodDataList = ref([])
         const apodInterval = 7
-        const apodEndDate = ref(moment().subtract(1, 'days'))
+        const apodEndDate = ref(moment())
         const apodEnd = ref(null)
         const apodStart = ref(null)
 
@@ -66,7 +66,7 @@ export default defineComponent({
         }
 
         const setNextRange = () => {
-            apodEndDate.value = apodEndDate.value.subtract(1, 'days')
+            apodEndDate.value.subtract(1, 'days')
             apodEnd.value = apodEndDate.value.format('YYYY-MM-DD')
             apodStart.value = apodEndDate.value.subtract(apodInterval, 'days').format('YYYY-MM-DD')
         }
